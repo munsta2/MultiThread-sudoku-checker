@@ -115,16 +115,17 @@ public class sudokuChecker {
         // Array to keep track of threads and their outputs
         int[] validArray = new int[11];
         // Sudoku board
+        //  REPLACE BOARD HERE TO TEST OTHER SOLUTIONS
         int[][] board = {
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 },
-                { 5, 5, 5, 5, 5, 5, 5, 5, 5 }
+            {7, 9, 2, 1, 5, 4, 3, 8, 6}, 
+            {6, 4, 3, 8, 2, 7, 1, 5, 9},
+            {8, 5, 1, 3, 9, 6, 7, 2, 4},
+            {2, 6, 5, 9, 7, 3, 8, 4, 1},
+            {4, 8, 9, 5, 6, 1, 2, 7, 3},
+            {3, 1, 7, 4, 8, 2, 9, 6, 5},
+            {1, 3, 6, 7, 4, 8, 5, 9, 2},
+            {9, 7, 4, 2, 1, 5, 6, 3, 8},
+            {5, 2, 8, 6, 3, 9, 4, 1, 7}
         };
 
         printBoard(board);
@@ -189,11 +190,11 @@ public class sudokuChecker {
     public static void printBoard(int[][] board) {
         for (int i = 0; i < board.length; i++) {
             if (i % 3 == 0) {
-                System.out.println("----------------------");
+                System.out.println("-------------------------");
             }
             for (int j = 0; j < board[0].length; j++) {
                 if (j % 3 == 0) {
-                    System.out.print("|");
+                    System.out.print("| ");
                 }
                 System.out.print(board[i][j] + " ");
                 if (j == board[0].length - 1)
@@ -201,7 +202,7 @@ public class sudokuChecker {
             }
             System.out.println();
         }
-        System.out.println("----------------------");
+        System.out.println("-------------------------");
     }
 
 }
