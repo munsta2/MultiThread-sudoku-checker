@@ -1,3 +1,7 @@
+//Student name: Jesse Karwaski	
+//Student#: 0382722
+
+
 import java.util.Arrays;
 
 class threeByThree implements Runnable {
